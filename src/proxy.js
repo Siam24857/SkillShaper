@@ -1,26 +1,23 @@
 import { NextResponse } from 'next/server'
 import { auth } from './app/lib/auth'
-import { headers } from 'next/headers'
- 
- 
-export async function proxy(request) {
 
-  const session = await auth.api.getSession({
-        headers: await headers()
-    })
+export async function middleware(request) {
+  try {
+    const session = await auth.api.getSession({
+      headers: request.headers,
+    });
 
-    console.log(session)
+    if (!session && !request.nextUrl.pathname.startsWith('/login')) {
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
 
-   
-
-if(session){
-    return NextResponse.next()
-}
-  return NextResponse.redirect(new URL('/Login', request.url))
-
-
+    return NextResponse.next();
+  } catch (err) {
+    console.log("Middleware error:", err);
+    return NextResponse.next();  
+  }
 }
 
 export const config = {
-  matcher:  ["/CrouseDettails/:path*"]
-}
+  matcher: ["/CrouseDettails/:path*"],
+};
