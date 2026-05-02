@@ -4,26 +4,30 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
-await client.connect();
+// lazy connection (IMPORTANT)
+let db;
 
-const db = client.db();
+async function getDB() {
+  if (!db) {
+    await client.connect();
+    db = client.db();
+  }
+  return db;
+}
 
 export const auth = betterAuth({
-  baseURL: process.env.BETTER_AUTH_URL,  
+  baseURL: process.env.BETTER_AUTH_URL,
 
   emailAndPassword: {
     enabled: true,
   },
 
- baseURL: process.env.BETTER_AUTH_URL, 
-    socialProviders: {
-        google: { 
-            clientId: process.env.GOOGLE_CLIENT_ID, 
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET, 
-        }, 
+  socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
+  },
 
-  database: mongodbAdapter(db, {
-    client,
-  }),
-})
+  database: mongodbAdapter(await getDB()),
+});
