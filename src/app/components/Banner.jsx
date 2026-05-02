@@ -5,7 +5,7 @@ const Banner = () => {
             <img
                 src="https://t3.ftcdn.net/jpg/04/12/12/98/360_F_412129819_HaLS1MLvkJBPaBPMagPUOYm1SfAcaT7h.jpg"
                 alt="Banner"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-150 object-cover object-center"
             />
             
             {/* ওভারলে */}
