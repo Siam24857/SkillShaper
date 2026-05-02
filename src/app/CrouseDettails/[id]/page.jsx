@@ -3,10 +3,12 @@ import Link from "next/link";
 const Dettailkspage = async ({ params }) => {
     const { id } = await params;
 
-    const res = await fetch('http://localhost:3000/Data.json')
-    const data = await res.json()
-    const course = data.find(course => course.id === parseInt(id));
 
+ const res = await fetch("/Data.json", {
+  cache: "no-store"
+})
+  const data = await res.json()
+  const course = data.find(course => course.id === parseInt(id));
     return (
         
         <div className="min-h-screen py-8 sm:py-10 md:py-12 lg:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
