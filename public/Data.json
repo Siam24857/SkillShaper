@@ -7,7 +7,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Build modern web applications using React and Next.js.",
-    "image": "https://i.postimg.cc/example-course4.png",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/example-course1.png",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Master DSA concepts for coding interviews and problem solving.",
-    "image": "https://i.postimg.cc/example-course5.png",
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
     "category": "Computer Science"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.7,
     "level": "Advanced",
     "description": "Deep dive into modern JavaScript concepts and patterns.",
-    "image": "https://i.postimg.cc/example-course2.png",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn the basics of user interface and user experience design.",
-    "image": "https://i.postimg.cc/example-course3.png",
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
     "category": "Design"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Start coding in Python with hands-on examples and projects.",
-    "image": "https://i.postimg.cc/example-course6.png",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935",
     "category": "Programming"
   }
 ]

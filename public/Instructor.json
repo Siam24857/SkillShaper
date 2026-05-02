@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "expertise": "Full Stack Development",
+    "courses": 12,
+    "students": 15000,
+    "rating": 4.8,
+    "image": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "expertise": "UI/UX Design",
+    "courses": 8,
+    "students": 9800,
+    "rating": 4.7,
+    "image": "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    "id": 3,
+    "name": "David Kim",
+    "expertise": "Data Science",
+    "courses": 10,
+    "students": 12000,
+    "rating": 4.9,
+    "image": "https://randomuser.me/api/portraits/men/65.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Emily Brown",
+    "expertise": "Python Programming",
+    "courses": 6,
+    "students": 7500,
+    "rating": 4.6,
+    "image": "https://randomuser.me/api/portraits/women/68.jpg"
+  }
+]
