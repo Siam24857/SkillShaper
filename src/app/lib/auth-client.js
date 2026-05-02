@@ -1,10 +1,7 @@
-import { createAuthClient } from "better-auth/react"
+import { createAuthClient } from "better-auth/react";
+
 export const authClient = createAuthClient({
-    
-    baseURL: "https://b13-a8-platfoprm-1597.vercel.app/"
-})
+  baseURL: "/"   
+});
 
-export const { signIn, signUp, useSession } = createAuthClient()
-
-
-
+export const { signIn, signUp, useSession } = authClient;
