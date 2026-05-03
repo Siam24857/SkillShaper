@@ -1,9 +1,7 @@
 import Cartpage from "./Cart";
 
 const Crouse = async () => {
-  const res = await fetch("/Data.json", {
-  cache: "no-store"
-})
+  const res = await fetch("http://localhost:3000/Data.json")
   const data = await res.json()
   
   return (

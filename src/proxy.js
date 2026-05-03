@@ -1,23 +1,28 @@
 import { NextResponse } from 'next/server'
-import { auth } from './app/lib/auth'
+import { auth } from '@/app/lib/auth'
 
-export async function middleware(request) {
+export async function proxy(request) {
   try {
     const session = await auth.api.getSession({
       headers: request.headers,
     });
 
-    if (!session && !request.nextUrl.pathname.startsWith('/login')) {
+    const isLoginPage = request.nextUrl.pathname.startsWith('/login');
+
+    if (!session && !isLoginPage) {
       return NextResponse.redirect(new URL('/login', request.url));
     }
 
     return NextResponse.next();
   } catch (err) {
     console.log("Middleware error:", err);
-    return NextResponse.next();  
+    return NextResponse.next();
   }
 }
 
 export const config = {
-  matcher: ["/CrouseDettails/:path*"],
+  matcher: [
+    "/CrouseDettails/:path*",
+    "/dashboard/:path*",
+  ],
 };

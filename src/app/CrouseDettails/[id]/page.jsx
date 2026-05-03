@@ -4,9 +4,7 @@ const Dettailkspage = async ({ params }) => {
     const { id } = await params;
 
 
- const res = await fetch("/Data.json", {
-  cache: "no-store"
-})
+ const res = await fetch("http://localhost:3000/Data.json")
   const data = await res.json()
   const course = data.find(course => course.id === parseInt(id));
     return (
