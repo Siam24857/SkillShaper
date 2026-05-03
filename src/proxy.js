@@ -7,10 +7,10 @@ export async function proxy(request) {
       headers: request.headers,
     });
 
-    const isLoginPage = request.nextUrl.pathname.startsWith('/login');
+    const isLoginPage = request.nextUrl.pathname.startsWith('/Login');
 
     if (!session && !isLoginPage) {
-      return NextResponse.redirect(new URL('/login', request.url));
+      return NextResponse.redirect(new URL('/Login', request.url));
     }
 
     return NextResponse.next();
@@ -21,8 +21,5 @@ export async function proxy(request) {
 }
 
 export const config = {
-  matcher: [
-    "/CrouseDettails/:path*",
-    "/dashboard/:path*",
-  ],
+  matcher: [ "/CrouseDettails/:path*" ],
 };

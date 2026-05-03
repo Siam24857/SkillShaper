@@ -1,11 +1,11 @@
 import Link from "next/link";
+import courseData from "@/Data.json"; 
 
 const Dettailkspage = async ({ params }) => {
     const { id } = await params;
 
 
- const res = await fetch("http://localhost:3000/Data.json")
-  const data = await res.json()
+   const data = courseData;
   const course = data.find(course => course.id === parseInt(id));
     return (
         

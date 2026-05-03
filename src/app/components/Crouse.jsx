@@ -1,8 +1,8 @@
 import Cartpage from "./Cart";
+import courseData from "@/Data.json"; 
 
 const Crouse = async () => {
-  const res = await fetch("http://localhost:3000/Data.json")
-  const data = await res.json()
+  const data = courseData; 
   
   return (
     <div className="space-y-4 mt-4 px-3 sm:px-4 md:px-5 lg:px-5">
