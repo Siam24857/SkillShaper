@@ -4,7 +4,7 @@
  SkillSphere is a modern e-learning platform that connects students with industry experts through high-quality courses. The platform allows users to browse courses, view instructor profiles, enroll in trending courses and manage their learning journey with a personalized user account system.
 
 3. Live URL
-http://localhost:3000
+https://b13-a8-platfoprm-j9sv.vercel.app
 
 4. Key Features (Sorted)
 Authentication
