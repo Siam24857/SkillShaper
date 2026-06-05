@@ -3,7 +3,7 @@
 # SkillSphere
 
 ### Live URL
-https://b13-a8-platfoprm-j9sv.vercel.app
+https://skillshaper-platfoprm-j9sv.vercel.app/
 
 ---
 
